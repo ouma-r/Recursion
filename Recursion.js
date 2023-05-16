@@ -11,17 +11,31 @@
  
 
 function iterateAndLogWithFor(n) {
-
-  // TODO: your work goes here
-
-}
+  var result=""
+      for (var i=0;i<n;i++){
+          if(n%2!==0){
+              return n+"is odd"
+          }else{n%2===0}{
+      
+          return n+"is even"
+      }}
+  return n+result
+  }
  
+  function iterateAndLogWithWhile(n) {
 
-function iterateAndLogWithWhile(n) {
-
-  // TODO: your work goes here
-
-}
+    var result=""
+      var i=0
+      while (i<n) {
+          i++;
+          if (n%2!==0) {
+              return "is odd"
+          }else{n%2===0}{
+              return "is even"
+          }
+      }
+  return n+result
+  }
 /*****************************  2  ***********************/
 //  Using a for loop THEN a while loop THEN recursion
 //  Write a JavaScript function that will iterate from n to 0. For each iteration,
@@ -45,10 +59,13 @@ function reverseIterateAndLogWithWhile(n) {
 }
 
 function reverseIterateAndLogRecursively(n) {
-
-  // TODO: your work goes here
-
-}
+  if(n%2!==0){
+      return "is odd"
+  }else{n%2==0}{
+      return "is even" 
+  }
+  return n
+  }
 /*****************************  3  ***********************/
 //  Using a for loop THEN a while loop
 //  Write a function that:
@@ -59,11 +76,17 @@ function reverseIterateAndLogRecursively(n) {
 //  If the number is not divisible by 3 or 5, print the number
  
 
+
 function weirdDivisionWithFor(n) {
 
-  // TODO: your work goes here
-
-}
+  for(var i=0;i<n;i++){
+      if(n %1 === 0&& n%5 ===0){
+          return "james"
+      }
+  } if(n %1===0&& n%3===0){
+      return "julia"
+  }
+  }
  
 
 function weirdDivisionWithWhile(n) {
@@ -78,9 +101,13 @@ function weirdDivisionWithWhile(n) {
 
 function inverseWeirdDivisionRecursively(n) {
 
-  // TODO: your work goes here
-
-}
+  if (n%1===0&& n %5===0) {
+      return "james"
+  }else{n%1===0&& n%3===0}{
+      return "julia"
+  }
+ 
+ }
  
 
 /*****************************  4  ***********************/
@@ -108,12 +135,14 @@ function laughWithWhile(number) {
 
 
 
-function laughRecursively(number) {
+function laughRecursively (str,num) {
+  if(num<=0){
+      
+  return ""
+  
+}else{return  str+repeat(str,num-1)
+   } }
 
-  // TODO: your work goes here
-
-}
- 
 
 /*****************************  4  ***********************/
  Using a for loop THEN a while loop
@@ -139,11 +168,12 @@ function sumWithFor(number) {
  Create a function that calculates the factorial of a number
  factorial(3); => 3*2*1 = 6
  factorial(5); => 5*4*3*2*1 = 120
-function factorialRecursively(number) {
 
-  // TODO: your work goes here
-
-}
+ function factorialRecursively(number) {
+  if (number=number*number*number){
+      return number
+  }
+  }
  
 
 /*****************************  6  ***********************/
@@ -192,13 +222,13 @@ function reverseWithFor(str) {
 
 
 
-
 function reverseRecursively(str) {
 
-  // TODO: your work here
-
+  if (str==="") {
+      return ""
+  }else
+  {return reverseRecursively(str.substring(1))+str[0]}
 }
- 
 
 /*****************************  8  ***********************/
  Using a for loop OR a while loop
@@ -228,9 +258,11 @@ function addDigits(num) {
   Write a function called fib that accepts a number n as a parameter and computes the nth fibonacci number using the above rules.
  
 
-function fibRecursive(number) {
-
-  // TODO: your work goes here
+  function fib(number) {
+    if(number ===1||n===1){
+        return  1
+    }
+   else{  return fib(number-1)+(number-2)}
 
 }
 
@@ -280,11 +312,15 @@ function average(arrOfNumbers) {
  findMax([1, 6, 9, 0]); => 9
  
 
-function findMax(str) {
-
-  // TODO: your work goes here
-
+ function findMax(arr) {
+  if (arr.length === 1) {
+    return arr[0];
+  } else {
+    var subMax = findMax(arr.slice(1));
+    return Math.max(arr[0], subMax);
+  }
 }
+
  
 
 /*****************************  14  ***********************/
